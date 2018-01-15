@@ -2,9 +2,16 @@ GEM
   remote: https://rubygems.org/
   specs:
     backports (3.11.0)
+    closure-compiler (1.1.13)
+    concurrent-ruby (1.0.5)
+    daemons (1.2.6)
+    eventmachine (1.2.5)
+    json (2.1.0)
     multi_json (1.13.1)
     mustermann (1.0.1)
     rack (2.0.3)
+    rack-cache (1.7.1)
+      rack (>= 0.4)
     rack-protection (2.0.0)
       rack
     sinatra (2.0.0)
@@ -12,6 +19,9 @@ GEM
       rack (~> 2.0)
       rack-protection (= 2.0.0)
       tilt (~> 2.0)
+    sinatra-bootstrap (0.6.1)
+      sinatra (>= 1.0)
+      sinatra-outputbuffer
     sinatra-contrib (2.0.0)
       backports (>= 2.0)
       multi_json
@@ -19,14 +29,32 @@ GEM
       rack-protection (= 2.0.0)
       sinatra (= 2.0.0)
       tilt (>= 1.3, < 3)
+    sinatra-outputbuffer (0.1.0)
+      sinatra (>= 1.0.a)
+    sprockets (3.7.1)
+      concurrent-ruby (~> 1.0)
+      rack (> 1, < 3)
+    sprockets-helpers (1.2.1)
+      sprockets (>= 2.2)
+    thin (1.7.2)
+      daemons (~> 1.0, >= 1.0.9)
+      eventmachine (~> 1.0, >= 1.0.4)
+      rack (>= 1, < 3)
     tilt (2.0.8)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  closure-compiler
+  json
+  rack-cache
   sinatra (~> 2.0)
+  sinatra-bootstrap (~> 0.6.1)
   sinatra-contrib
+  sprockets
+  sprockets-helpers
+  thin
 
 BUNDLED WITH
    1.16.0

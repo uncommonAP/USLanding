@@ -23,7 +23,7 @@ module.exports = {
   },
   devtool: 'eval-source-map',
   devServer: {
-    contentBase: './build',
+    contentBase: '../public',
     inline: true,
     hot: true
   }
